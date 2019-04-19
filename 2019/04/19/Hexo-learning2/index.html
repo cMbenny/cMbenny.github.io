@@ -37,7 +37,7 @@
             </li>
           </ul>
            
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何添加RSS订阅服务"><span class="post-toc-number">1.</span> <span class="post-toc-text">如何添加RSS订阅服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RSS是什么？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">RSS是什么？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo中添加RSS订阅？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Hexo中添加RSS订阅？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何使用RSS订阅服务，为什么要使用RSS订阅服务？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">如何使用RSS订阅服务，为什么要使用RSS订阅服务？</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何添加live2D萌萌哒？"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何添加live2D萌萌哒？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何自定义关于？"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何自定义关于？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo文件结构以及自己的一个思考！"><span class="post-toc-number">4.</span> <span class="post-toc-text">hexo文件结构以及自己的一个思考！</span></a></li></ol> 
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何添加RSS订阅服务"><span class="post-toc-number">1.</span> <span class="post-toc-text">如何添加RSS订阅服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RSS是什么？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">RSS是什么？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo中添加RSS订阅？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Hexo中添加RSS订阅？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何使用RSS订阅服务，为什么要使用RSS订阅服务？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">如何使用RSS订阅服务，为什么要使用RSS订阅服务？</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何添加live2D萌萌哒？"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何添加live2D萌萌哒？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何自定义关于？"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何自定义关于？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo文件结构以及自己的思考！"><span class="post-toc-number">4.</span> <span class="post-toc-text">hexo文件结构以及自己的思考！</span></a></li></ol> 
           
         </div>
       </div>
@@ -68,7 +68,7 @@
 <li>如何添加RSS订阅服务?</li>
 <li>如何添加live2D萌萌哒？</li>
 <li>如何自定义关于？</li>
-<li>hexo文件结构以及自己的一个思考！</li>
+<li>hexo文件结构以及自己的思考！</li>
 </ol>
 </blockquote>
 <h1 id="如何添加RSS订阅服务"><a href="#如何添加RSS订阅服务" class="headerlink" title="如何添加RSS订阅服务"></a>如何添加RSS订阅服务</h1><p> 在安装RSS订阅服务之前需要了解一下什么是RSS.</p>
@@ -103,7 +103,7 @@
 </ol>
 <h1 id="如何自定义关于？"><a href="#如何自定义关于？" class="headerlink" title="如何自定义关于？"></a>如何自定义关于？</h1><p> First: <code>hexo new page about</code><br> Second：在theme目录下的_config.yml下添加一下代码：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line"> home: /</span><br><span class="line"> archives: /archives</span><br><span class="line"> about: /about    //添加关于的导航栏</span><br><span class="line"> RSS: /atom.xml</span><br></pre></td></tr></table></figure></p>
 <p>  Third: 修改Hexo/Source/about/index.md文件。<br>  Fourth：部署运行即可。</p>
-<h1 id="hexo文件结构以及自己的一个思考！"><a href="#hexo文件结构以及自己的一个思考！" class="headerlink" title="hexo文件结构以及自己的一个思考！"></a>hexo文件结构以及自己的一个思考！</h1><p> <em>在Hexo搭建自己的工程中，前端页面显示风格样式全部都在Theme文件下修改，而文章的内容均有Hexo部署生成。</em></p>
+<h1 id="hexo文件结构以及自己的思考！"><a href="#hexo文件结构以及自己的思考！" class="headerlink" title="hexo文件结构以及自己的思考！"></a>hexo文件结构以及自己的思考！</h1><p> <em>在Hexo搭建自己的工程中，前端页面显示风格样式全部都在Theme文件下修改，而文章的内容均有Hexo部署生成。</em></p>
 
     </div>
 </div></div>
