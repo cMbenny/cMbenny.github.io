@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yoursite.com/"/>
-  <updated>2019-04-19T01:07:26.073Z</updated>
+  <updated>2019-04-19T07:54:04.315Z</updated>
   <id>https://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo&#39;s learning2</title>
+    <link href="https://yoursite.com/2019/04/19/Hexo-learning2/"/>
+    <id>https://yoursite.com/2019/04/19/Hexo-learning2/</id>
+    <published>2019-04-19T06:22:39.000Z</published>
+    <updated>2019-04-19T07:54:04.315Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文的重点内容是我满足自己的需求面临的问题以及如何解决。</p><ol><li>如何添加RSS订阅服务?</li><li>如何添加live2D萌萌哒？</li><li>如何自定义关于？</li><li>hexo文件结构以及自己的一个思考！</li></ol></blockquote><h1 id="如何添加RSS订阅服务"><a href="#如何添加RSS订阅服务" class="headerlink" title="如何添加RSS订阅服务"></a>如何添加RSS订阅服务</h1><p> 在安装RSS订阅服务之前需要了解一下什么是RSS.</p><h2 id="RSS是什么？"><a href="#RSS是什么？" class="headerlink" title="RSS是什么？"></a>RSS是什么？</h2><p>  引用来自于百度百科<a href="https://baike.baidu.com/item/rss/24470?fr=aladdin" target="_blank" rel="noopener">RSS</a></p><blockquote><p>RSS(Really Simple Syndication)是一种描述和同步网站内容的格式，是使用最广泛的XML应用。RSS搭建了信息迅速传播的一个技术平台，使得每个人都成为潜在的信息提供者。发布一个RSS文件后，这个RSS Feed中包含的信息就能直接被其他站点调用，而且由于这些数据都是标准的XML格式，所以也能在其他的终端和服务中使用，是一种描述和同步网站内容的格式。<br>RSS目前广泛用于网上新闻频道，blog和wiki。使用RSS订阅能更快地获取信息，网站提供RSS输出，有利于让用户获取网站内容的最新更新。网络用户可以在客户端借助于支持RSS的聚合工具软件，在不打开网站内容页面的情况下阅读支持RSS输出的网站内容。</p></blockquote><h2 id="Hexo中添加RSS订阅？"><a href="#Hexo中添加RSS订阅？" class="headerlink" title="Hexo中添加RSS订阅？"></a>Hexo中添加RSS订阅？</h2><ol><li>安装hexo-generator-feed插件<br><code>npm install hexo-generator-feed</code></li><li><p>在Hexo的_config.yml下添加下面代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// Extensions</span><br><span class="line">// Plugins: http://hexo.io/plugins/</span><br><span class="line">// RSS订阅</span><br><span class="line">plugin:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">// Feed Atom</span><br><span class="line">feed:</span><br><span class="line">type: atom</span><br><span class="line">path: atom.xml</span><br><span class="line">limit: 20</span><br></pre></td></tr></table></figure></li><li><p>在Theme的_config.yml下添加下面代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// rss </span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure></li><li><p>项目重新部署运行就OK了！</p></li></ol><h2 id="如何使用RSS订阅服务，为什么要使用RSS订阅服务？"><a href="#如何使用RSS订阅服务，为什么要使用RSS订阅服务？" class="headerlink" title="如何使用RSS订阅服务，为什么要使用RSS订阅服务？"></a>如何使用RSS订阅服务，为什么要使用RSS订阅服务？</h2><ul><li>如何使用？<br>使用RSS阅读器，添加自己的RSS。以我的<a href="https://cmbenny.github.io/atom.xml" target="_blank" rel="noopener">RSS服务</a>自己为例子,点击后复制地址即可。</li><li>为什么要用？<br>RSS简单说来就是网站会提供RSS输出来提供内容的更新，用户需要通过RSS阅读器订阅RSS直接阅读网站的信息，不用去打开网站，提高了效率。</li></ul><h1 id="如何添加live2D萌萌哒？"><a href="#如何添加live2D萌萌哒？" class="headerlink" title="如何添加live2D萌萌哒？"></a>如何添加live2D萌萌哒？</h1><p> 这里不解释live2D是什么东西，直接看我右下角的猫就是了！简单直观。</p><ol><li>安装hexo-helper-live2d插件<br><code>npm install hexo-helper-live2d --save</code></li><li>选择你要下载的模型，这里推荐<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">作者动画展示网站</a> ,真大佬。我选择的是hijiki,一只可爱的小黑猫😄<br><code>npm install live2d-widget-model-hijiki</code></li><li><p>在Hexo的_config.yml添加下面代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki</span><br><span class="line">  display:</span><br><span class="line">    position: right   //显示位置</span><br><span class="line">    width: 200        //显示宽度</span><br><span class="line">    height: 400       //显示高度</span><br><span class="line">  mobile:</span><br><span class="line">    show: true        //是否显示</span><br></pre></td></tr></table></figure></li><li><p>安装完后部署运行就可以了！<br><img src="/2019/04/19/Hexo-learning2/hijiki.jpg" alt title="小黑猫"></p></li></ol><h1 id="如何自定义关于？"><a href="#如何自定义关于？" class="headerlink" title="如何自定义关于？"></a>如何自定义关于？</h1><p> First: <code>hexo new page about</code><br> Second：在theme目录下的_config.yml下添加一下代码：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line"> home: /</span><br><span class="line"> archives: /archives</span><br><span class="line"> about: /about    //添加关于的导航栏</span><br><span class="line"> RSS: /atom.xml</span><br></pre></td></tr></table></figure></p><p>  Third: 修改Hexo/Source/about/index.md文件。<br>  Fourth：部署运行即可。</p><h1 id="hexo文件结构以及自己的一个思考！"><a href="#hexo文件结构以及自己的一个思考！" class="headerlink" title="hexo文件结构以及自己的一个思考！"></a>hexo文件结构以及自己的一个思考！</h1><p> <em>在Hexo搭建自己的工程中，前端页面显示风格样式全部都在Theme文件下修改，而文章的内容均有Hexo部署生成。</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;本文的重点内容是我满足自己的需求面临的问题以及如何解决。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何添加RSS订阅服务?&lt;/li&gt;
+&lt;li&gt;如何添加live2D萌萌哒？&lt;/li&gt;
+&lt;li&gt;如何自定义关于？&lt;/li&gt;
+&lt;li&gt;hexo文件结构以及自己的一个思考！
+      
+    
+    </summary>
+    
+      <category term="Technology" scheme="https://yoursite.com/categories/Technology/"/>
+    
+    
+      <category term="Hexo" scheme="https://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Learn MarkDown Pramar</title>
@@ -43,11 +74,11 @@
   </entry>
   
   <entry>
-    <title>Hexo&#39;s learning(one)</title>
-    <link href="https://yoursite.com/2019/04/16/Hexo&#39;s%20learning(one)/"/>
-    <id>https://yoursite.com/2019/04/16/Hexo&#39;s learning(one)/</id>
+    <title>Hexo&#39;s learning1</title>
+    <link href="https://yoursite.com/2019/04/16/Hexo&#39;s%20learning1/"/>
+    <id>https://yoursite.com/2019/04/16/Hexo&#39;s learning1/</id>
     <published>2019-04-16T02:17:42.000Z</published>
-    <updated>2019-04-19T03:18:18.159Z</updated>
+    <updated>2019-04-19T06:21:48.047Z</updated>
     
     <content type="html"><![CDATA[<p>this is my first step to learn hexo and then I will update this content.</p><h2 id="Install-hexo"><a href="#Install-hexo" class="headerlink" title="Install hexo"></a>Install hexo</h2><h3 id="First-install-node-js"><a href="#First-install-node-js" class="headerlink" title="First: install node.js"></a>First: install <a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a></h3><p> Due to the node.js contains NPM, so needn’t install NPM.</p><h3 id="Second-install-git"><a href="#Second-install-git" class="headerlink" title="Second: install git"></a>Second: install <a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git</a></h3><h3 id="Third-install-hexo"><a href="#Third-install-hexo" class="headerlink" title="Third: install hexo"></a>Third: install hexo</h3><p> <code>$ npm install -g hexo-cli</code></p><h2 id="SetUp"><a href="#SetUp" class="headerlink" title="SetUp"></a>SetUp</h2><p> <code>$ hexo init &lt;folder&gt;</code><br> <code>$ cd &lt;folder&gt;</code><br> <code>$ npm install</code></p><p> After execution, you already success to build own blog. And then run your blog .</p><h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><p> <code>hexo g</code>   === hexo generate 生成静态页面<br> <code>hexo d</code>   === hexo deploy 部署<br> <code>hexo s</code>   === hexo server 运行personal blog</p><hr><p>END 我是分割线 2019/4/16 11:13</p><hr>]]></content>
     
